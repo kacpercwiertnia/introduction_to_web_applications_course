@@ -1,0 +1,14 @@
+<main>
+    <h3>Zarejestruj się!</h3>
+    <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+        <label for="name">nazwa:</label><input name="name" id="name" type="text" formControlName="name">
+        <p *ngIf="signUpForm.get('name')?.errors && signUpForm.get('name')?.touched">Proszę podać nazwę</p>
+        <label for="email">email:</label><input name="email" id="email" type="text" formControlName="email">
+        <p *ngIf="signUpForm.get('email')?.errors && signUpForm.get('email')?.touched">Proszę podać email</p>
+        <label for="password">hasło:</label><input name="password" id ="password" type="password" formControlName="password">
+        <p *ngIf="signUpForm.get('password')?.errors && signUpForm.get('password')?.touched">Proszę podać hasło</p>
+        <button type="submit" [disabled]="!signUpForm.valid">Zarejestruj</button>
+    </form>
+    <h4>Masz juz konto?</h4>
+    <a routerLink="/sign-in">Zaloguj się</a>
+</main>

@@ -1,0 +1,26 @@
+<div id="cart">
+    <span (click)="deleteTrip()" id="close">X</span>
+    <img src="{{trip.image}}" alt="tripImage">
+    <app-trip-rating></app-trip-rating>
+    <div id="content">
+        <div id="upperSection">
+            <div id="destAndQuant">
+                <h4>{{trip.destination | uppercase}} <span id="lowAmount" [ngStyle]="{'visibility': numOfTrip <= 3 ? 'visible' : 'hidden'}" >!</span></h4>
+                <h4 *ngIf="noAdding == false"><span (click)="addTrip()" [ngStyle]="{'color': noAdding ? 'grey' : 'black', 'cursor': noAdding ? 'not-allowed' : 'pointer'}">+</span>{{numOfTrip}}<span (click)="removeTrip()" [ngStyle]="{'color': noRemoving ? 'grey' : 'black', 'cursor': noRemoving ? 'not-allowed' : 'pointer'}">-</span></h4>
+                <h4 *ngIf="noAdding == true"><span (click)="addTrip()" [ngStyle]="{'color': noAdding ? 'grey' : 'black', 'cursor': noAdding ? 'not-allowed' : 'pointer'}">+</span>Brak miejsc<span (click)="removeTrip()" [ngStyle]="{'color': noRemoving ? 'grey' : 'black', 'cursor': noRemoving ? 'not-allowed' : 'pointer'}">-</span></h4>
+            </div>
+        </div>
+        <div id="lowerSection">
+            <div id="date">
+                <h4>{{trip.start}} - {{trip.end}}</h4>
+            </div>
+            <div id="nameAndPrice">
+                <h2>{{trip.name | uppercase}}</h2>
+                <h2>{{trip.price | currency: 'PLN'}}</h2>
+            </div>
+            <div id="desc">
+                {{trip.description}}
+            </div>
+        </div>
+    </div>
+</div>

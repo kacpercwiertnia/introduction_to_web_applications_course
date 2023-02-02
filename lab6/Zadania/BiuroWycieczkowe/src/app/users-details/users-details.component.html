@@ -1,0 +1,30 @@
+<div *ngIf="user" id="user">
+    <div>
+        <label>Nazwa: </label> {{user.name}}
+    </div>
+    <div>
+        <label>Email: </label> {{user.email}}
+    </div>
+    <div>
+        <label>UID: </label> {{user.uid}}
+    </div>
+    <div>
+        <label>Rola: </label> {{user.role}}
+    </div>
+    <div >
+        <label>Wycieczki: </label> {{user.trips}}
+    </div>
+    <div>
+        <label>Czy zbanowany: </label> {{user.banned}}
+    </div>
+    <div>
+        <button [disabled]="user.banned" (click)="setBanned()">Banuj</button>
+        <button [disabled]="!user.banned" (click)="setUnbanned()">Od banuj</button>
+        <select (input)="changeRole($event)">
+            <option disabled selected>Wybierz role</option>
+            <option value="admin">Admin</option>
+            <option value="manager">Manager</option>
+            <option value="regular">Regular</option>
+        </select>
+    </div>
+</div>

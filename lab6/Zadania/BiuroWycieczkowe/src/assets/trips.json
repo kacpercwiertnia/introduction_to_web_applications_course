@@ -1,0 +1,104 @@
+{
+    "trips": [
+        {
+            "name": "Albatros Palace",
+            "destination": "Egipt",
+            "start": "02-12-2022",
+            "end": "09-12-2022",
+            "price": 2000,
+            "quantity": 5,
+            "description": "Ten luksusowy ośrodek wypoczynkowy all inclusive w budynku w stylu pałacowym położonym nad Morzem Czerwonym jest przeznaczony tylko dla par i rodzin. Obiekt jest oddalony o 11 km od międzynarodowego lotniska w Hurghadzie.",
+            "images": ["/../../assets/images/albatros_palace.jpeg", "/../../assets/images/albatros_palace_2.jpeg", "/../../assets/images/albatros_palace_3.jpeg"]
+        },
+        {
+            "name": "Oz Side Premium",
+            "destination": "Turcja",
+            "start": "12-12-2022",
+            "end": "19-12-2022",
+            "price": 1500,
+            "quantity": 9,
+            "description": "Ekskluzywny hotel położony w ogrodach krajobrazowych o powierzchni 2 hektarów. Jest oddalony o 6 minut pieszo od najbliższej plaży nad Morzem Śródziemnym oraz 2 km od drogi krajowej D400.",
+            "images": ["/../../assets/images/oz_side_premium.jpeg", "/../../assets/images/oz_side_premium_2.jpeg", "/../../assets/images/oz_side_premium_3.jpeg"]
+        },
+        {
+            "name": "Mitsis Norida Beach",
+            "destination": "Grecja",
+            "start": "22-11-2022",
+            "end": "29-12-2022",
+            "price": 4000,
+            "quantity": 11,
+            "description": "Od sezonu 2019 w hotelu sporo nowości! Tereny basenowe oraz restauracje a'la carte przeszły metamorfozę: większe baseny i przestrzeń restauracji. Nowoczesny styl, wygodne leżaki w połączeniu z pięknymi widokami są receptą na wyjątkowe wakacje.",
+            "images": ["/../../assets/images/mitsis_norida_beach.jpeg", "/../../assets/images/mitsis_norida_beach_2.jpeg", "/../../assets/images/mitsis_norida_beach_3.jpeg"]
+        },
+        {
+            "name": "Allegro Isora",
+            "destination": "Hiszpania",
+            "start": "15-12-2022",
+            "end": "22-12-2022",
+            "price": 5000,
+            "quantity": 3,
+            "description": "Hotel Allegro Isora (dawniej Barceló Varadero) położony jest 10 minut spacerem od plaży La Arena w południowo-zachodniej części Teneryfy. Oferuje on 3 odkryte baseny, basen dla dzieci oraz centrum odnowy biologicznej.",
+            "images": ["/../../assets/images/allegro_isora.jpeg", "/../../assets/images/allegro_isora_2.jpeg", "/../../assets/images/allegro_isora_3.jpeg"]
+        },
+        {
+            "name": "Blue Bay Grand Esmeralda",
+            "destination": "Meksyk",
+            "start": "22-12-2022",
+            "end": "03-01-2023",
+            "price": 6000,
+            "quantity": 7,
+            "description": "Hotel BlueBay Grand Esmeralda zlokalizowany jest niedaleko słynnej plaży Playa del Carmen. Na terenie obiektu na miłośników pysznej kuchni czeka 6 restauracji serwujących kuchnię z całego świata. Będąc w Meksyku, nie wolno pominąć oczywiście kuchni meksykańskiej.",
+            "images": ["/../../assets/images/blue_bay_grand_esmeralda.jpeg", "/../../assets/images/blue_bay_grand_esmeralda_2.jpeg", "/../../assets/images/blue_bay_grand_esmeralda_3.jpeg"]
+        },
+        {
+            "name": "Rotana Salalah Resort",
+            "destination": "Oman",
+            "start": "24-11-2022",
+            "end": "01-12-2022",
+            "price": 3500,
+            "quantity": 15,
+            "description": "Luksusowy ośrodek Salalah Rotana Resort położony jest w Omanie i oferuje tradycyjną gościnność oraz przyjazną atmosferę. Ten pięciogwiazdkowy obiekt znajduje się nad brzegiem Oceanu Indyjskiego i oddaje do dyspozycji Gości 422 wspaniałe pokoje, w tym pokoje rodzinne oraz apartamenty typu suite.",
+            "images": ["/../../assets/images/rotana_salalah_resort.jpeg", "/../../assets/images/rotana_salalah_resort_2.jpeg", "/../../assets/images/rotana_salalah_resort_3.jpeg"]
+        },
+        {
+            "name": "Primasol El Mehdi",
+            "destination": "Tunezja",
+            "start": "11-12-2022",
+            "end": "18-12-2022",
+            "price": 1500,
+            "quantity": 12,
+            "description": "PrimaSol El Mehdi to 4-gwiazdkowy hotel położony tuż przy piaszczystej plaży. Obiekt oferuje szereg udogodnień zarówno dla dorosłych, jak i dla dzieci. Na najmłodszych czeka oddzielny basen, miniklub, minidisco i ciekawe animacje (również dla nastolatków). Dla starszych gości przygotowano program rozrywkowy i ofertę sportowo-wypoczynkową (m.in. jacuzzi, masaże, boisko do gry w piłkę nożną czy tenisa).",
+            "images": ["/../../assets/images/primasol_el_mehdi.jpeg", "/../../assets/images/primasol_el_mehdi_2.jpeg", "/../../assets/images/primasol_el_mehdi_3.jpeg"]
+        },
+        {
+            "name": "Grifid Bolero",
+            "destination": "Bułgaria",
+            "start": "16-12-2022",
+            "end": "23-12-2022",
+            "price": 1000,
+            "quantity": 2,
+            "description": "Grifid Hotel Bolero położony jest w kurorcie Złote Piaski, a od piaszczystej plaży oddziela go przybrzeżna promenada i sąsiedni hotel Grifid Vistamar. Za dodatkowy atut tego obiektu uznaje się lokalizację w pięknym ogrodzie, w którym znajduje się aquapark i kompleks basenów.",
+            "images": ["/../../assets/images/grifid_bolero.jpeg", "/../../assets/images/grifid_bolero_2.jpeg", "/../../assets/images/grifid_bolero_3.jpeg"]
+        },
+        {
+            "name": "Bahia Grand Principe Punta Cana",
+            "destination": "Dominikana",
+            "start": "02-12-2022",
+            "end": "09-12-2022",
+            "price": 5500,
+            "quantity": 10,
+            "description": "Grand Bahia Principe Punta Cana to obiekt położony w niedalekiej odległości od pięknej, piaszczystej plaży. Dzięki temu idealnie sprawdzi się zarówno dla par, jak i dla rodzin. Na najmłodszych gości czeka tutaj miniklub oraz baseny. Dorośli będą mogli spędzić wolny czas w strefie spa czy kosztując orzeźwiających drinków nad basenem.",
+            "images": ["/../../assets/images/bahia_grand_principe_punta_cana.jpeg", "/../../assets/images/bahia_grand_principe_punta_cana_2.jpeg", "/../../assets/images/bahia_grand_principe_punta_cana_3.jpeg"]
+        },
+        {
+            "name": "Iberostar Las Dalias",
+            "destination": "Hiszpania",
+            "start": "11-12-2022",
+            "end": "18-12-2022",
+            "price": 3500,
+            "quantity": 8,
+            "description": "Hotel chwalony za świetną obsługę oraz bogate All Inclusive. Do tego doskonała lokalizacja zarówno dla miłośników wieczornych rozrywek jak i dla amatorów plażowania. Gorąco polecamy ten hotel na urlop z grupą znajomych, jak i na rodzinne wakacje!",
+            "images": ["/../../assets/images/iberostar_las_dalias.jpeg", "/../../assets/images/iberostar_las_dalias_2.jpeg", "/../../assets/images/iberostar_las_dalias_3.jpeg"]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+<header>
+    <h2>{{title}}</h2>
+    <p>{{contents}}</p>
+</header>
+<main>
+    <h2>Wybierz Temat</h2>
+    <section>
+    <app-topic-selector *ngFor="let el of topicss; index as i" (notify)="onNotifyClicked($event)" [title]="el.title" [description]="el.description" [contents]="el.contents" [index]="i"></app-topic-selector>
+    </section>
+</main>

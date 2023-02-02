@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    height: 100vh;
+    width: 260px;
+    border-right: 1px solid rgb(224,229,230);
+    transition: all 0.3s;
+}
+
+.navbar .menu{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    row-gap: 10px;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar .menu li{
+    display: flex;
+    align-items: center;
+    color: rgb(15,76,104);
+    padding: 10px 10px;
+    column-gap: 10px;
+    transition: all 0.5s;
+}
+
+.navbar .menu li a{
+    text-transform: uppercase;
+    color: rgb(15,76,104);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+
+.navbar .menu .hidder{
+    width: 90px;
+    height: 20px;
+    background-color: red;
+}
+
+.navbar .menu .with_notifications{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.navbar .menu li:hover{
+    background-color: rgb(48,178,167);
+    border-radius: 0px 15px 15px 0px;
+}
+
+.navbar .menu li .icon{
+    border: 2px solid rgb(15,76,104);
+    border-radius: 5px;
+    font-size: 30px;
+    transition: all 0.5s;
+}
+
+.navbar .menu li:hover .icon{
+    color:white;
+    border: 2px solid white;
+}
+
+.navbar .menu .notifications{
+    color: rgb(48,178,167);
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: 1px solid rgb(48,178,167);
+    margin-right: 5px;
+    transition: all 0.5s;
+}
+
+@media (max-width:600px) {
+
+    .navbar{
+        width: 120px;
+    }
+
+    .navbar .menu li a{
+        font-size: 0;
+    }
+
+    .navbar .menu .notifications{
+        margin-right: 20px;
+        margin-left: 5px
+    }
+}

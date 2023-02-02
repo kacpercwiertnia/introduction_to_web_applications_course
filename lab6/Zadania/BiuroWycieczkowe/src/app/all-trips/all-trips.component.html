@@ -1,0 +1,9 @@
+<div id="tripsDisplay">
+<ng-container *ngFor="let el of allTrips">
+    <app-single-trip
+    [trip] = "el"
+    (updateTripsList)="onChangeList($event)"
+    [ngStyle] = "{'border' : highestPrice == el.price ? '3px solid rgb(34, 180, 41)' : lowestPrice == el.price ? '3px solid rgb(181, 40, 40)' : 'none'}"
+    ></app-single-trip>
+</ng-container>
+</div>

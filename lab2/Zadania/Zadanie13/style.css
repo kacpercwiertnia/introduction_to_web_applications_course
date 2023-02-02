@@ -1,0 +1,282 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    background-image: url('bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    row-gap: 10px;
+    column-gap: 10px;
+    grid-template-areas:
+    "header header header"
+    "sidebar navigation ads"
+    "sidebar main ads"
+    "footer footer footer";
+}
+
+header{
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    grid-area: header;
+    color: white;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-area: sidebar;
+}
+
+aside .selfcard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    top:20px;
+}
+
+aside .selfcard img{
+    width: 100px;
+    border-radius: 50%;
+}
+
+aside .selfcard h5{
+    margin: 0;
+    margin-top: 10px;
+    font-size: 20px;
+    color:rgb(0, 0, 0);
+}
+
+aside .selfcard .socials{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+aside .selfcard .socials .fa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: purple;
+    color: white;
+    border-radius: 50%;
+}
+
+nav{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    grid-area: navigation;
+}
+
+nav ul{
+    list-style-type: none;
+    margin: 10px 0px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 900;
+}
+
+main{
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: main;
+}
+
+main .entry{
+    width: 90%;
+    padding: 25px 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+main .entry .content{
+    width: 80%;
+}
+
+main .entry .content img{
+    width: 80px;
+    border-radius: 50%;
+    float: left;
+    shape-outside: circle();
+    margin-right: 15px;
+}
+
+main .entry .content h4{
+    text-align: justify;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+main .entry .content p{
+    text-align: justify;
+    margin: 0;
+}
+
+main .myForm{
+    width: 100%;
+}
+
+main .myForm .leftForm{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0% 100%);
+}
+
+main .myForm .leftForm h2{
+    text-transform: uppercase;
+    padding: 0px 20px;
+    color: purple;
+}
+
+main .myForm .leftForm form{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .myForm .leftForm form input[type="text"],
+main .myForm .leftForm form input[type="email"]{
+    border: 0;
+    margin-bottom: 30px;
+    padding: 15px;
+    width: 50%;
+}
+
+main .myForm .leftForm form .radios {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+main .myForm .leftForm form .radios input{
+    display: none;
+}
+
+main .myForm .leftForm form .radios label{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main .myForm .leftForm form .radios label div{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    border: 3px solid purple;
+    transition: background-color 0.25s;
+    margin-right: 5px;
+}
+
+main .myForm .leftForm form .radios #grupa1:checked ~ label[for="grupa1"] div,
+main .myForm .leftForm form .radios #grupa2:checked ~ label[for="grupa2"] div{
+    background-color: purple;
+}
+
+main .myForm .leftForm form input[type="submit"]{
+    align-self: flex-start;
+    background-color: purple;
+    color: white;
+    border: 0;
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: 3px solid purple;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+main .myForm .leftForm form input[type="submit"]:hover{
+    background-color: transparent;
+    color: purple;
+}
+
+article{
+    background-color: rgba(255, 255, 255, 0.5);
+    grid-area: ads;
+}
+
+article .filler{
+    width: 200px;
+    height: 50px;
+}
+
+footer{
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    grid-area: footer;
+    color: white;
+}
+
+@media (max-width:1000px){
+    main .myForm .leftForm{
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    
+    main .myForm .leftForm{
+        align-items: center;
+    }
+
+    main .myForm .leftForm form{
+        align-items: center;
+    }
+
+    main .myForm .leftForm form input[type="text"],
+    main .myForm .leftForm form input[type="email"]{
+        width: 100%;
+    }
+
+    main .myForm .leftForm form .radios label div{
+        width: 20px;
+        height: 20px;
+    }
+
+    main .myForm .leftForm form input[type="submit"]{
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+}
+
+
+
+@media (max-width:800px){
+    body {
+        grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "sidebar main"
+        "ads footer";
+    }
+}
+
+@media (max-width:500px){
+    body {
+
+    grid-template-areas:
+    "header" "navigation" "main" "sidebar" "ads" "footer"
+    }
+}

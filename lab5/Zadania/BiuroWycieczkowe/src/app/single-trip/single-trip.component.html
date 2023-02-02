@@ -1,0 +1,14 @@
+<div id="cart">
+    <span (click)="deleteTrip()" id="close">X</span>
+    <img src="{{trip.images[0]}}" alt="tripImage" routerLink='/trips/{{index}}'>
+    <div id="content">
+        <div id="destAndQuant">
+            <h5>{{trip.destination | uppercase}} <span id="lowAmount" [ngStyle]="{'visibility': numOfTrip <= 3 ? 'visible' : 'hidden'}" >!</span></h5>
+            <h5>{{trip.start}} - {{trip.end}}</h5>
+        </div>
+        <div id="nameAndPrice">
+            <h2>{{trip.name | uppercase}}</h2>
+            <h2>{{trip.price | currency: 'PLN'}}</h2>
+        </div>
+    </div>
+</div>

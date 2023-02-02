@@ -1,0 +1,30 @@
+div{
+    display: flex;
+    align-items: center;
+}
+
+div span{
+    color: rgb(34, 180, 41);
+    margin-right: 10px;
+}
+
+ul{
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border-radius: 5px;
+    width: 150px;
+    padding: 10px;
+}
+
+div:hover ~ ul{
+    display: block;
+}
+
+ul li:last-of-type{
+    margin-top: 10px;
+}

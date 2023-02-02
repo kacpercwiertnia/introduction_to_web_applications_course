@@ -1,0 +1,106 @@
+#cart{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+#cart #close{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+#cart #close:hover{
+    color: red
+}
+
+#cart img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid rgb(122, 122, 122);
+}
+
+#cart #content{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#cart #content #destAndQuant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart #content #destAndQuant h5{
+    margin: 0;
+}
+
+
+#cart #content #destAndQuant h5 #lowAmount{
+    font-weight: 900;
+    color: red;
+    border: 2px solid red;
+    padding: 1px 10px;
+    border-radius: 50%;
+    cursor:auto;
+}
+
+#cart #content #destAndQuant h5 span{
+    cursor: pointer;
+    color: grey;
+}
+
+#cart #content #destAndQuant h5 span:nth-of-type(2){
+    margin-left: 10px;
+}
+
+#cart #content #destAndQuant h5 span:nth-of-type(1){
+    margin-right: 10px;
+}
+
+#cart #content #nameAndPrice{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+#cart #content #nameAndPrice h2{
+    font-size: 1em;
+    margin: 0;
+}
+
+#cart #content #desc{
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+#cart .button{
+    padding: 10px 15px;
+    cursor: pointer;
+    background-color: rgb(34, 180, 41);
+    border-radius: 5px;
+    margin: 5px 0px;
+    color: white;
+    text-transform: uppercase;
+    transition: all 0.25s;
+}
+
+#cart .button:hover{
+    background-color: rgb(33, 168, 40);
+    box-shadow: 0px 0px 5px 1px rgb(202 202 202);
+}

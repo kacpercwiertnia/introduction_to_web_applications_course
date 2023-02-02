@@ -1,0 +1,88 @@
+body {
+	font-family: Tahoma, "Lucida Grande", Arial, sans-serif;
+	font-size: 62.5%;
+	margin: auto;
+	width: 60%;
+}
+h1 {
+	font-size: 2.4em;
+	background-color: rgb(32, 61, 68);
+	border-top: 2px solid rgb(250, 237, 136);
+	border-bottom: 2px solid rgb(250, 237, 136);
+	padding: 10px 20px;
+	color: white;
+}
+h2 {
+	font-size: 1.8em;
+	color: #666666;
+}
+h3 {
+	font-size: 1.4em;
+	color: #14556B;
+}
+p, ul, ol {
+	font-size: 1.2em;
+	line-height: 130%;
+}
+
+ul {
+	color: #666666;
+	list-style: square;
+}
+
+header{
+	background-color: rgb(246, 249, 237);
+	padding: 5px 0;
+}
+
+main{
+	padding: 0px 20px;
+	background-color: rgb(246, 249, 237);
+}
+
+aside{
+	float: right;
+	background-color: rgb(250, 237, 136);
+	border-top: 4px solid rgb(251, 200, 51);
+	padding: 0 20px;
+	width: 30%;
+}
+
+aside h3{
+	text-align: center;
+	color: black;
+}
+
+aside ul{
+	color: black;
+	padding-left: 5%;
+	list-style-type: disc;
+}
+section > h2{
+	margin-top: 0;
+}
+
+section h2{
+	color: black;
+	margin-bottom: 0;
+}
+
+section h2:nth-of-type(1), section h2:nth-of-type(2){
+	width: 62%;
+	border-bottom: 1px solid rgb(207, 223, 214);
+}
+
+section h2:nth-of-type(3){
+	border-bottom: 1px solid rgb(207, 223, 214);
+}
+
+section p:nth-of-type(1), section p:nth-of-type(2), section p:nth-of-type(4){
+	margin-top: 0;
+}
+
+section p:nth-of-type(5){
+	border-bottom: 1px solid rgb(207, 223, 214);
+}
+section p:last-of-type{
+	padding-bottom: 70px;
+}

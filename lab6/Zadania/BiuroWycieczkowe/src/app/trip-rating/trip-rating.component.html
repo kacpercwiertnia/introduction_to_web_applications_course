@@ -1,0 +1,22 @@
+<main>
+    <form [formGroup]="ratingForm" (ngSubmit)="onSubmit()" *ngIf="this.authService.getUser()?.role !== 'manager'">
+        <label for="purchased">data zakupu:</label><input name="purchased" id="purchased" type="date" formControlName="purchased">
+        <section>
+            <span (click)="saveRating(1)" (mouseover)="onHoverRating(1)" (mouseout)="removeHoverRating()" [ngStyle]="{'color' : hoverRating >= 1 ? 'gold' : 'rgba(128, 128, 128, 0.297)', 'cursor' : savedRating > 0 ? 'default' : 'pointer'}" class="material-symbols-outlined">star</span>
+            <span (click)="saveRating(2)" (mouseover)="onHoverRating(2)" (mouseout)="removeHoverRating()" [ngStyle]="{'color' : hoverRating >= 2 ? 'gold' : 'rgba(128, 128, 128, 0.297)', 'cursor' : savedRating > 0 ? 'default' : 'pointer'}" class="material-symbols-outlined">star</span>
+            <span (click)="saveRating(3)" (mouseover)="onHoverRating(3)" (mouseout)="removeHoverRating()" [ngStyle]="{'color' : hoverRating >= 3 ? 'gold' : 'rgba(128, 128, 128, 0.297)', 'cursor' : savedRating > 0 ? 'default' : 'pointer'}" class="material-symbols-outlined">star</span>
+            <span (click)="saveRating(4)" (mouseover)="onHoverRating(4)" (mouseout)="removeHoverRating()" [ngStyle]="{'color' : hoverRating >= 4 ? 'gold' : 'rgba(128, 128, 128, 0.297)', 'cursor' : savedRating > 0 ? 'default' : 'pointer'}" class="material-symbols-outlined">star</span>
+            <span (click)="saveRating(5)" (mouseover)="onHoverRating(5)" (mouseout)="removeHoverRating()" [ngStyle]="{'color' : hoverRating >= 5 ? 'gold' : 'rgba(128, 128, 128, 0.297)', 'cursor' : savedRating > 0 ? 'default' : 'pointer'}" class="material-symbols-outlined">star</span>
+        </section>
+        <p *ngIf="ratingTouched">Proszę wybrać ocenę</p>
+        <label for="opinion">opinia:</label><textarea name="opinion" type="text" formControlName="opinion"></textarea>
+        <p *ngIf="ratingForm.get('opinion')?.errors && ratingForm.get('opinion')?.touched">Proszę uzupełnić opinię (od 50 do 500 znaków)</p>
+        <button type="submit" [disabled]="!ratingForm.valid || savedRating == 0">Dodaj</button>
+    </form>
+    <form [formGroup]="ratingForm2" (ngSubmit)="onSubmit2()" *ngIf="this.authService.getUser()?.role === 'manager'">
+        <label for="purchased">data zakupu:</label><input name="purchased" id="purchased" type="date" formControlName="purchased">
+        <label for="opinion">opinia:</label><textarea name="opinion" type="text" formControlName="opinion"></textarea>
+        <p *ngIf="ratingForm2.get('opinion')?.errors && ratingForm2.get('opinion')?.touched">Proszę uzupełnić opinię (od 50 do 500 znaków)</p>
+        <button type="submit" [disabled]="!ratingForm2.valid">Dodaj</button>
+    </form>
+</main>

@@ -1,0 +1,115 @@
+p:nth-of-type(1){
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    font-weight: 100;
+    font-style: italic;
+    border: 5px dotted red;
+    padding: 10px;
+    margin: 15px;
+}
+
+p:nth-of-type(2){
+    color:grey;
+    background-color: gainsboro;
+    font-size: 10px;
+    font-weight: 700;
+    font-style: oblique;
+    width: 400px;
+    height: 100px;
+    border: 2px solid olive;
+    padding: 40px;
+    margin: 1px;
+}
+
+p:nth-of-type(3){
+    color: goldenrod;
+    background-color: grey;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+    width: 500px;
+    height: 100px;
+    overflow:auto;
+}
+
+p:nth-of-type(4){
+    color:white;
+    background-color: darkolivegreen;
+    font-size: 40px;
+    font-weight: 700;
+    font-style:inherit;
+}
+table:nth-of-type(1){
+    width: 100%;
+    height: 250px;
+}
+
+table:nth-of-type(1) tr:first-child{
+    background-color: rgb(76, 143, 207);
+}
+table:nth-of-type(1) tr:nth-child(2n){
+    background-color: rgb(156, 184, 211);
+}
+
+table:nth-of-type(1) tr:nth-child(2n+3){
+    background-color: rgb(207, 226, 244);
+}
+table:nth-of-type(1) tr th{
+    border-bottom: 2px solid white;
+}
+
+table:nth-of-type(2){
+    width: 90%;
+    height: 200px;
+    background-color: black;
+}
+
+table:nth-of-type(2) tr:first-child{
+    background-color: rgb(116, 94, 57);
+}
+table:nth-of-type(2) tr{
+    background-color: rgb(148, 148, 148);
+}
+
+img[alt='kotek1']{
+    width: 30%;
+    float: left;
+    padding: 10px;
+}
+img[alt='kotek2']{
+    width: 30%;
+    float: right;
+    padding: 10px;
+}
+
+img[alt='kotek3']{
+    width: 30%;
+}
+
+img[alt='kotek4']{
+    width: 30%;
+    position: relative;
+    left: 32%;
+}
+
+img[alt='kotek5']{
+    width: 30%;
+    position: relative;
+    left: -30%;
+
+}
+
+ul:nth-of-type(1){
+    background-color: rgb(6, 114, 203);
+    position: relative;
+    top: 250px;
+    width: fit-content;
+}
+
+ul:nth-of-type(2){
+    background-color: rgb(215, 56, 56);
+    position: relative;
+    top: 50px;
+    width: fit-content;
+}

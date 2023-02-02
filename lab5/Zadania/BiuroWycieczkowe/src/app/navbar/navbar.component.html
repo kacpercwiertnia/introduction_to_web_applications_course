@@ -1,0 +1,16 @@
+<nav>
+    <h2 routerLink='/home'>
+        AGHTravel
+    </h2>
+    <span (click)="toggleMenu()" class="material-symbols-outlined burger">{{ isMenuOpen ? "close" : "menu"}}</span>
+    <ul [ngClass]="{'opened': isMenuOpen}">
+        <li routerLink='/home' routerLinkActive="activeLeft" >Strona główna</li>
+        <li routerLink='/trips' routerLinkActive="activeLeft" >Wycieczki</li>
+        <li>Twoje wycieczki</li>
+    </ul>
+    <ul [ngClass]="{'opened': isMenuOpen}" >
+        <li routerLink='/add' routerLinkActive="activeRight" ><span class="material-symbols-outlined">add</span></li>
+        <li routerLink='/cart' routerLinkActive="activeRight" ><span class="material-symbols-outlined">shopping_cart</span></li>
+    </ul>
+    <div><h3>Twoja aktualna ilość wybranych wycieczek: {{cart.quantity}}, za łączną sume: {{cart.value|currency: 'PLN'}}</h3></div>
+</nav>

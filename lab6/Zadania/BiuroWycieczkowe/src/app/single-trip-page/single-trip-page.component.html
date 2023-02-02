@@ -1,0 +1,37 @@
+<header>
+    <section>
+        <h3 routerLink='/trips'>Powrót do listy wycieczek</h3>
+    </section>
+    <section>
+        <div><h4>{{trip.destination}}</h4><h4>{{trip.start}} - {{trip.end}}</h4></div>
+        <div>
+            <h3>{{trip.name}}</h3>
+            <h3 *ngIf="trip.numOfReviews == 0">Brak Ocen</h3>
+            <h3 *ngIf="trip.numOfReviews > 0">Ocena: ({{trip.numOfReviews}}) {{trip.rating}}</h3>
+        </div>
+        <p>{{trip.description}}</p>
+        <div>
+            <h3>{{trip.price|currency: 'PLN'}}</h3>
+            <h3 *ngIf="numOfTrip > 0"><span (click)="addTrip()" [ngStyle]="{'color': numOfTrip == 0 ? 'grey' : 'black', 'cursor': numOfTrip == 0 ? 'not-allowed' : 'pointer'}">+</span>{{numOfTrip}}<span (click)="removeTrip()" [ngStyle]="{'color': numOfTrip == trip.quantity ? 'grey' : 'black', 'cursor': numOfTrip == trip.quantity ? 'not-allowed' : 'pointer'}">-</span></h3>
+            <h3 *ngIf="numOfTrip == 0"><span (click)="addTrip()" [ngStyle]="{'color': numOfTrip == 0 ? 'grey' : 'black', 'cursor': numOfTrip == 0 ? 'not-allowed' : 'pointer'}">+</span>Brak miejsc<span (click)="removeTrip()" [ngStyle]="{'color': numOfTrip == trip.quantity ? 'grey' : 'black', 'cursor': numOfTrip == trip.quantity ? 'not-allowed' : 'pointer'}">-</span></h3>
+        </div>
+    </section>
+    <div class="slider">
+        <div class="slide fade" *ngFor="let img of trip.images; index as i" [ngStyle]="{'display' : slideIndex == i+1 ? 'block' : 'none'}">
+            <img src="{{img}}" alt="imageOfTrip">
+        </div>
+        <a class="prev" (click)="plusSlide(-1)">&#10094;</a>
+        <a class="next" (click)="plusSlide(1)">&#10095;</a>
+    </div>
+</header>
+<main>
+<div *ngFor="let review of trip.reviews" class="opinion">
+    <h3>{{review.nick}}</h3>
+    <h4>{{review.purchased}}</h4>
+    <div>
+        <span *ngFor="let el of review.rating" class="material-symbols-outlined">star</span>
+    </div>
+    <p>{{review.opinion}}</p>
+</div>
+<app-trip-rating *ngIf="!authService.isBanned" [index]="id"></app-trip-rating>
+</main>

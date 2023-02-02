@@ -1,0 +1,518 @@
+body{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+main .left_side{
+    background: rgb(10,75,255);
+    background: linear-gradient(90deg, rgba(10,75,255,1) 0%, rgba(60,120,255,1) 50%, rgba(64,186,255,1) 100%);
+    width: 50%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.25s;
+}
+
+main:has(#color_red:checked) .left_side{
+    background: rgb(128,0,0);
+    background: linear-gradient(90deg, rgba(128,0,0,1) 0%, rgba(215,33,33,1) 50%, rgba(255,70,70,1) 100%);
+}
+
+main:has(#color_green:checked) .left_side{
+    background: rgb(15,128,0);
+    background: linear-gradient(90deg, rgba(15,128,0,1) 0%, rgba(55,215,33,1) 50%, rgba(87,255,70,1) 100%); 
+}
+
+main:has(#color_orange:checked) .left_side{
+    background: rgb(185,90,0);
+    background: linear-gradient(90deg, rgba(185,90,0,1) 0%, rgba(255,137,0,1) 50%, rgba(255,148,29,1) 100%);
+}
+
+main:has(#color_grey:checked) .left_side{
+    background: rgb(48,48,48);
+    background: linear-gradient(90deg, rgba(48,48,48,1) 0%, rgba(74,74,74,1) 50%, rgba(163,163,163,1) 100%);
+}
+
+main .left_side .top{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 10px;
+}
+
+main .left_side .top img[src="logo.png"]{
+    width: 25%;
+    object-fit: contain;
+}
+
+main .left_side .top span{
+    padding: 5px;
+    background-color: white;
+    border-radius: 50%;
+    color: #3c78ff;
+    font-size: 18px;
+    transition: color 0.25s;
+}
+
+main:has(#color_red:checked) .left_side .top span,
+main:has(label[for="color_red"]:hover) .left_side .top span{
+    color: rgba(215,33,33,1);
+}
+
+main:has(#color_green:checked) .left_side .top span,
+main:has(label[for="color_green"]:hover) .left_side .top span{
+    color: rgba(55,215,33,1);
+}
+
+main:has(#color_orange:checked) .left_side .top span,
+main:has(label[for="color_orange"]:hover) .left_side .top span{
+    color: rgba(255,137,0,1);
+}
+
+main:has(#color_grey:checked) .left_side .top span,
+main:has(label[for="color_grey"]:hover) .left_side .top span{
+    color: rgba(74,74,74,1);
+}
+
+main .left_side h1{
+    color: rgba(255, 255, 255, 0.2);
+    letter-spacing: 0.1em;
+    font-size: 5.3em;
+    font-weight: 900;
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+main .left_side img[src="blue.png"]{
+    width: 150%;
+    transform: rotate(-20deg);
+    margin-right: 50%;
+    transition: all 0.25s;
+}
+
+main:has(#color_red:checked) .left_side img[src="blue.png"],
+main:has(label[for="color_red"]:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(120deg);
+}
+
+main:has(#color_green:checked) .left_side img[src="blue.png"],
+main:has(label[for="color_green"]:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(230deg);    
+}
+
+main:has(#color_orange:checked) .left_side img[src="blue.png"],
+main:has(label[for="color_orange"]:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(170deg);
+}
+
+main:has(#color_grey:checked) .left_side img[src="blue.png"],
+main:has(label[for="color_grey"]:hover) .left_side img[src="blue.png"]{
+    filter: grayscale(1);
+}
+
+main .right_side{
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 20px 0px 20px 1px rgb(198, 198, 198);
+    transition: all 0.25s;
+}
+
+main .right_side .header{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+main .right_side .header .title{
+    display: flex;
+    align-items: center;
+}
+
+main .right_side .header .title h2{
+    margin: 0;
+}
+
+main .right_side .header .title span{
+    padding: 5px;
+    background-color: #3c78ff;
+    color: white;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: background-color 0.25s;
+}
+
+main:has(#color_red:checked) .right_side .header .title span{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#color_green:checked) .right_side .header .title span{
+    background: rgba(55,215,33,1);
+}
+
+main:has(#color_orange:checked) .right_side .header .title span{
+    background: rgba(255,137,0,1);
+}
+
+main:has(#color_grey:checked) .right_side .header .title span{
+    background: rgba(74,74,74,1);
+}
+
+main .right_side .header h4{
+    margin: 0;
+}
+
+main .right_side .details{
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+}
+
+main .right_side .details h3{
+    margin: 0;
+}
+
+main .right_side .details p{
+    margin: 0;
+}
+
+main .right_side .color_picker{
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+}
+
+main .right_side .color_picker .colors{
+    padding-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+main .right_side .color_picker h3{
+    margin: 0 0 2px 0px;
+}
+
+main .right_side .color_picker .colors input{
+    display: none;
+}
+
+main .right_side .color_picker .colors label div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    transition: background-color 0.25s;
+}
+
+main .right_side .color_picker .colors label[for="color_blue"] div{
+    background-color: #3c78ff;
+}
+
+main .right_side .color_picker .colors label[for="color_red"] div{
+    background-color: red;
+}
+
+main .right_side .color_picker .colors label[for="color_green"] div{
+    background-color: green;
+}
+
+main .right_side .color_picker .colors label[for="color_orange"] div{
+    background-color: orange;
+}
+
+main .right_side .color_picker .colors label[for="color_grey"] div{
+    background-color: gray;
+}
+
+main .right_side .color_picker .colors #color_blue:checked ~ label[for="color_blue"] div,
+main .right_side .color_picker .colors #color_red:checked ~ label[for="color_red"] div,
+main .right_side .color_picker .colors #color_green:checked ~ label[for="color_green"] div,
+main .right_side .color_picker .colors #color_orange:checked ~ label[for="color_orange"] div,
+main .right_side .color_picker .colors #color_grey:checked ~ label[for="color_grey"] div{
+    border: 4px solid white;
+    box-shadow: 0px 0px 5px 1px rgb(159, 159, 159);
+}
+
+main .right_side .size_picker{
+    padding: 10px 0px;
+    border-bottom: 1px solid rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+}
+
+main .right_side .size_picker h3{
+    margin: 0 0 2px 0px;
+}
+
+main .right_side .size_picker .sizes{
+    display: flex;
+    align-items: center;
+}
+
+main .right_side .size_picker input{
+    display: none;
+}
+
+main .right_side .size_picker label{
+    padding: 5px 10px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 5px;
+    margin: 0px 5px;
+    transition: background-color 0.25s;
+}
+
+main .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: #3c78ff;
+    color: white;
+}
+
+main:has(#color_red:checked) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#color_red:checked) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#color_red:checked) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#color_red:checked) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#color_red:checked) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#color_green:checked) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#color_green:checked) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#color_green:checked) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#color_green:checked) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#color_green:checked) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(55,215,33,1);
+}
+main:has(#color_orange:checked) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#color_orange:checked) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#color_orange:checked) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#color_orange:checked) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#color_orange:checked) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(255,137,0,1);
+}
+
+main:has(#color_grey:checked) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#color_grey:checked) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#color_grey:checked) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#color_grey:checked) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#color_grey:checked) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(74,74,74,1);
+}
+
+main .right_side .buy{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .right_side .buy a{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:white;
+    padding: 5px 10px;
+    background-color: #3c78ff;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background-color 0.25s;
+}
+
+main:has(#color_red:checked) .right_side .buy a{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#color_green:checked) .right_side .buy a{
+    background: rgba(55,215,33,1);
+}
+
+main:has(#color_orange:checked) .right_side .buy a{
+    background: rgba(255,137,0,1);
+}
+
+main:has(#color_grey:checked) .right_side .buy a{
+    background: rgba(74,74,74,1);
+}
+
+/* HOVERS */
+
+main:has(#blue_hover:hover) .left_side{
+    background: rgb(10,75,255);
+    background: linear-gradient(90deg, rgba(10,75,255,1) 0%, rgba(60,120,255,1) 50%, rgba(64,186,255,1) 100%);
+}
+
+main:has(#red_hover:hover) .left_side{
+    background: rgb(128,0,0);
+    background: linear-gradient(90deg, rgba(128,0,0,1) 0%, rgba(215,33,33,1) 50%, rgba(255,70,70,1) 100%);
+}
+
+main:has(#green_hover:hover) .left_side{
+    background: rgb(15,128,0);
+    background: linear-gradient(90deg, rgba(15,128,0,1) 0%, rgba(55,215,33,1) 50%, rgba(87,255,70,1) 100%); 
+}
+
+main:has(#orange_hover:hover) .left_side{
+    background: rgb(185,90,0);
+    background: linear-gradient(90deg, rgba(185,90,0,1) 0%, rgba(255,137,0,1) 50%, rgba(255,148,29,1) 100%);
+}
+
+main:has(#grey_hover:hover) .left_side{
+    background: rgb(48,48,48);
+    background: linear-gradient(90deg, rgba(48,48,48,1) 0%, rgba(74,74,74,1) 50%, rgba(163,163,163,1) 100%);
+}
+
+
+main:has(#blue_hover:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(0deg);
+}
+
+main:has(#red_hover:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(120deg);
+}
+
+main:has(#green_hover:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(230deg);    
+}
+
+main:has(#orange_hover:hover) .left_side img[src="blue.png"]{
+    filter: hue-rotate(170deg);
+}
+
+main:has(#grey_hover:hover) .left_side img[src="blue.png"]{
+    filter: grayscale(1);
+}
+
+main:has(#blue_hover:hover) .right_side .header .title span{
+    background-color: #3c78ff
+}
+
+main:has(#red_hover:hover) .right_side .header .title span{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#green_hover:hover) .right_side .header .title span{
+    background: rgba(55,215,33,1);
+}
+
+main:has(#orange_hover:hover) .right_side .header .title span{
+    background: rgba(255,137,0,1);
+}
+
+main:has(#grey_hover:hover) .right_side .header .title span{
+    background: rgba(74,74,74,1);
+}
+
+
+main:has(#blue_hover:hover) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#blue_hover:hover) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#blue_hover:hover) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#blue_hover:hover) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#blue_hover:hover) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: #3c78ff;
+}
+
+main:has(#red_hover:hover) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#red_hover:hover) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#red_hover:hover) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#red_hover:hover) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#red_hover:hover) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#green_hover:hover) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#green_hover:hover) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#green_hover:hover) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#green_hover:hover) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#green_hover:hover) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(55,215,33,1);
+}
+
+main:has(#orange_hover:hover) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#orange_hover:hover) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#orange_hover:hover) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#orange_hover:hover) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#orange_hover:hover) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(255,137,0,1);
+}
+
+main:has(#grey_hover:hover) .right_side .size_picker .sizes #size_7:checked ~ label[for="size_7"],
+main:has(#grey_hover:hover) .right_side .size_picker .sizes #size_8:checked ~ label[for="size_8"],
+main:has(#grey_hover:hover) .right_side .size_picker .sizes #size_9:checked ~ label[for="size_9"],
+main:has(#grey_hover:hover) .right_side .size_picker .sizes #size_10:checked ~ label[for="size_10"],
+main:has(#grey_hover:hover) .right_side .size_picker .sizes #size_11:checked ~ label[for="size_11"]{
+    background-color: rgba(74,74,74,1);
+}
+
+main:has(#blue_hover:hover) .right_side .buy a{
+    background-color: #3c78ff;;
+}
+
+main:has(#red_hover:hover) .right_side .buy a{
+    background-color: rgba(215,33,33,1);
+}
+
+main:has(#green_hover:hover) .right_side .buy a{
+    background: rgba(55,215,33,1);
+}
+
+main:has(#orange_hover:hover) .right_side .buy a{
+    background: rgba(255,137,0,1);
+}
+
+main:has(#grey_hover:hover) .right_side .buy a{
+    background: rgba(74,74,74,1);
+}
+
+@media (max-width:700px){
+    main{
+        flex-direction: column;
+        width: 70%;
+        padding: 0px 20px;
+        box-shadow: 0px 0px 20px 1px rgb(86, 86, 86);
+    }
+
+    main .left_side{
+        width: 100%;
+        height: 10%;
+        padding: 0px 20px;
+    }
+
+    main .left_side .top span{
+        align-self: flex-start;
+    }
+
+    main .left_side h1{
+        font-size: 25vw;
+    }
+
+    main .left_side img[src="blue.png"]{
+        width: 100%;
+        transform: rotate(0deg);
+        margin-right: 10%;
+    }
+
+    main .right_side{
+        width: 100%;
+        box-shadow: none;
+    }
+}

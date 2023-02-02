@@ -1,0 +1,7 @@
+<div>
+<span class="material-symbols-outlined">shopping_cart</span>{{cart.value|currency: 'PLN'}}
+</div>
+<ul [ngStyle]="{'box-shadow' : cart.value == 0 ? 'none' : '0px 0px 16px 4px rgb(150, 150, 150)', 'background-color' : cart.value == 0 ? 'none' : 'white'}">
+<li *ngFor="let el of cart.state">{{el[0]}}: {{el[1]}}</li>
+<li [ngStyle]="{'display' : cart.value == 0 ? 'none' : 'block'}">Suma: {{cart.value|currency: 'PLN'}}</li>
+</ul>

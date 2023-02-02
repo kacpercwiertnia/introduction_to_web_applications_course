@@ -1,0 +1,17 @@
+<div id="sumOfTrips">
+    <h2 id="numsOfTrips" [ngStyle]="{'background-color': sumOfTrips >= 10 ? 'rgb(34, 180, 41)' : 'rgb(181, 40, 40)'}">Ilość wybranych wycieczek: {{sumOfTrips}}</h2>
+    <h2 id="formTitle" (click)="onShowForm()" >Dodaj wycieczkę</h2>
+    <app-trips-cart></app-trips-cart>
+</div>
+<app-trip-adding-form [displayForm]="displayForm" [ngStyle]="{'max-height' : displayForm[0] ? '550px' : '0px'}" (addNewTrip)="onAddNewTrip($event)" [images]="allImages"></app-trip-adding-form>
+<div id="tripsDisplay">
+<ng-container *ngFor="let el of allTrips; index as i">
+    <app-single-trip
+    [index] = "i"
+    [trip] = "el"
+    (updateSumOfTrips)="onChangeSum($event)"
+    (updateTripsList)="onChangeList($event)"
+    [ngStyle] = "{'border' : highestPrice == el.price ? '3px solid rgb(34, 180, 41)' : lowestPrice == el.price ? '3px solid rgb(181, 40, 40)' : 'none'}"
+    ></app-single-trip>
+</ng-container>
+</div>

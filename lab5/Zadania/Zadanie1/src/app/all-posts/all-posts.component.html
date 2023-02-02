@@ -1,0 +1,13 @@
+<form [formGroup]="postAddingForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title:</label><input name="title" id="title" type="text" formControlName="title">
+    <p *ngIf="postAddingForm.get('title')?.errors && postAddingForm.get('title')?.touched">Proszę podać tytuł</p>
+    <label for="body">Body:</label><textarea name="body" type="text" formControlName="body"></textarea>
+    <p *ngIf="postAddingForm.get('body')?.errors && postAddingForm.get('body')?.touched">Proszę uzupełnić treść (od 50 do 500 znaków)</p>
+    <button type="submit" [disabled]="!postAddingForm.valid">Dodaj</button>
+</form>
+<div *ngFor="let post of allPosts">
+    <h3>UserID: {{post.userId}}</h3>
+    <h3>PostId: {{post.id}}</h3>
+    <h2>PostTitle: {{post.title}}</h2>
+    <p>PostBody: {{post.body}}</p>
+</div>

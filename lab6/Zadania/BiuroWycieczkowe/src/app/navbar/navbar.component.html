@@ -1,0 +1,21 @@
+<nav>
+    <h2 routerLink='/home'>
+        AGHTravel
+    </h2>
+    <span (click)="toggleMenu()" class="material-symbols-outlined burger">{{ isMenuOpen ? "close" : "menu"}}</span>
+    <ul [ngClass]="{'opened': isMenuOpen}">
+        <li routerLink='/home' routerLinkActive="activeLeft" >Strona główna</li>
+        <li routerLink='/trips' routerLinkActive="activeLeft" >Wycieczki</li>
+        <li *ngIf="authService.isLoggedIn">Twoje wycieczki</li>
+        <li routerLink='/userslist'*ngIf="authService.isAdmin">Lista uzytkowników</li>
+    </ul>
+    <ul [ngClass]="{'opened': isMenuOpen}" >
+        <li class="fullBox" *ngIf="authService.isAdmin" routerLink='/add' routerLinkActive="activeRight" ><span class="material-symbols-outlined">add</span></li>
+        <li class="emptyBox" routerLink='/cart' routerLinkActive="activeRight" ><span class="material-symbols-outlined">shopping_cart</span></li>
+        <li class="fullBox" *ngIf="!authService.isLoggedIn" routerLink='/sign-in' routerLinkActive="activeRight"><span class="material-symbols-outlined">login</span></li>
+        <li class="fullBox" *ngIf="authService.isLoggedIn" (click)="authService.SignOut()"><span class="material-symbols-outlined">logout</span></li>
+        <li class="emptyBox" *ngIf="!authService.isLoggedIn" routerLink='/register-user' routerLinkActive="activeRight"><span class="material-symbols-outlined">person_add</span>
+</li>
+    </ul>
+    <div *ngIf="authService.getUser() != null"><h3>Witaj {{authService.getUser()?.name}}, Twoja aktualna ilość wybranych wycieczek: {{cart.quantity}}, za łączną sume: {{cart.value|currency: 'PLN'}}</h3></div>
+</nav>

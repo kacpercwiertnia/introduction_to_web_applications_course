@@ -1,0 +1,119 @@
+@keyframes slideleft {
+    from{
+        transform: translateX(-2000px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+    
+}
+
+@keyframes slideright {
+    from{
+        transform: translateX(2000px);
+    }
+
+    to{
+        transform: translateX(0px);
+    }
+    
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.blue_div{
+    background-color: rgb(0, 115, 255);
+    width: 100%;
+    height: 500px;
+    transform: skewY(-5deg);
+    position: absolute;
+    top:-150px;
+}
+
+.white_div{
+    width: 50%;
+    height: 300px;
+    background-color: white;
+    position: absolute;
+    top:390px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    position: absolute ;
+    width: 100%;
+    top: 30px;
+    overflow: hidden;
+    padding: 20px 0px;
+}
+
+header .tekst{
+    width: 55%;
+    animation-duration: 2s;
+    animation-name: slideleft;
+    transition: all 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+header .tekst h1{
+    color: white;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+header .tekst p{
+    color: white;
+    font-weight: 100;
+    margin-bottom: 30px;
+}
+
+header .tekst a{
+    color: white;
+    font-weight: 100;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+header .formularz{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    background-color: white;
+    padding: 20px 50px 20px 50px;
+    border-radius: 10px;
+    animation-duration: 2s;
+    animation-name: slideright;
+    box-shadow: 0px 0px 20px 1px rgb(132, 132, 132);
+    transition: all 1s;
+    max-width: 200px;
+}
+
+header .formularz h2{
+    font-size: 20px;
+    color:rgb(105, 105, 105);
+    margin-bottom: 40px;
+}
+
+header .formularz input{
+    border:none;
+    border-bottom: 1px solid rgb(86, 86, 86);
+    margin-bottom: 30px;
+}
+
+header .formularz a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(8, 91, 255);
+    padding: 10px 30px;
+    align-self: flex-start;
+    border-radius: 5px;
+}

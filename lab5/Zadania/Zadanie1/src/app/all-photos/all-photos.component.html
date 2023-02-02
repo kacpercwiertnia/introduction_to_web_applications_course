@@ -1,0 +1,5 @@
+<div *ngFor="let photo of allPhotos">
+    <h3>AlbumID: {{photo.albumId}}</h3>
+    <h3>PhotoId: {{photo.id}}</h3>
+    <img src="{{photo.thumbnailUrl}}" alt="thumbnail" routerLink='/photos/{{photo.id}}'>
+</div>

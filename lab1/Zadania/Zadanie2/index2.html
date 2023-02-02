@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <ul>
+        <li><a href="/index.html">Strona główna</a></li>
+        <li><a href="/features/">Oferta</a></li>
+        <li><a href="/experts/">Eksperci</a></li>
+        <li><a href="/quiz/">Quiz</a></li>
+        <li><a href="/projects/">Projekty</a></li>
+        <li><a href="/horoscopes/">Horoskop</a></li>
+      </ul>
+      <section>
+        <figure>
+            <img src="images/ph.jpeg" alt="image1">
+            <h3>Image1</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ph.jpeg" alt="image2">
+            <h3>Image2</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ph.jpeg" alt="image3">
+            <h3>Image3</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ph.jpeg" alt="image4">
+            <h3>Image4</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ph.jpeg" alt="image5">
+            <h3>Image5</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/ph.jpeg" alt="image6">
+            <h3>Image6</h3>
+            <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minima quas voluptatem corporis sunt ullam nemo autem natus sit consectetur nobis tenetur similique vel quibusdam laudantium itaque quaerat perspiciatis blanditiis.</figcaption>
+        </figure>    
+    </section>
+    <form>
+        <div>
+            <label for="nr_konta">Numer Konta</label>
+            <input type="text" id="nr_konta" pattern="[0-9]{2} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" required>
+        </div>
+        <div>
+            <label for="imie">Imię</label>
+            <input type="text" id="imie" required>
+        </div>
+        <div>
+            <label for="nazwisko">Nazwisko</label>
+            <input type="text" id="nazwisko" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+        </div>
+        <div>
+            <label for="adres">Adres</label>
+            <input type="text" id="adres" pattern="[A-Za-ząęźżśóćńłĄĘŻŹŚÓĆŃŁ]{1,} [a-z0-9/]{2,}" required>
+        </div>    
+        <div>
+            <label for="kod_pocztowy">Kod pocztowy</label>
+            <input type="text" id="kod_pocztowy" pattern="[0-9]{2}-[0-9]{3}" required>
+        </div>
+        <div>
+            <label for="miasto">Miasto</label>
+            <input type="text" id="miasto" list="miasta" required>
+            <datalist id="miasta">
+                <option value="Kraków">
+                <option value="Warszawa">
+                <option value="Poznań">
+                <option value="Wrocław">
+                <option value="Katowice">
+                <option value="Gdańsk">
+                <option value="Gdynia">
+                <option value="Rzeszów">
+                <option value="Lublin">
+                <option value="Łódź">
+            </datalist>
+        </div>
+        <div>
+            <label for="kwota_przelewu">Kwota przelewu</label>
+            <input type="text" id="kwota_przelewu" pattern="[0-9]{1,},[0-9]{2}" required>
+        </div>
+        <div>
+            <label for="data_przelewu">Data przelewu</label>
+            <input type="date" id="data_przelewu" required>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <footer>
+    <audio src="audio.wav" controls preload="none"></audio>
+</footer>
+</body>
+</html>

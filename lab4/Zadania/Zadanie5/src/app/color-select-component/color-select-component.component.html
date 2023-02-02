@@ -1,0 +1,6 @@
+<section [ngStyle]="{'visibility': colorDisabled ? 'visible' : 'hidden'}">
+    <ng-container *ngFor="let el of color; index as i">
+        <label for="i"><div (click)="setSelectedColor(i)" [ngStyle]="{'background-color': el}"></div></label>
+        <input type="radio" name="color" id="i">
+    </ng-container>
+</section>

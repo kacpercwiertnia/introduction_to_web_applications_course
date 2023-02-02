@@ -1,0 +1,117 @@
+body{
+    background-color: yellow;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+main section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+main section input{
+    display: none;
+}
+
+main section div{
+    background-color: magenta;
+    width: 250px;
+    height: 30px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    transition: all 0.25s;
+}
+
+main section:first-of-type div{
+    border-radius: 10px 10px 0px 0px;
+}
+
+main section:last-of-type div{
+    border-radius: 0px 0px 10px 10px;
+}
+
+main section div .off{
+    display: none;
+}
+
+main section div .arrow{
+    height: 10px;
+    width: 10px;
+    transform: rotate(45deg);
+    background-color: rgb(204, 33, 33);
+    padding: 0;
+    border-radius: 0;
+    margin-top: 40px;
+    display: none;
+}
+
+main section ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    max-height: 0px;
+    transition: max-height 0.25s;
+}
+
+main section ul li{
+    background-color: rgba(34,85,216,1);
+    width: 210px;
+    padding: 15px 30px;
+    margin: 0;
+}
+
+main section ul li:hover{
+    background: linear-gradient(0deg, rgba(147,237,255,1) 50%, rgba(34,85,216,1) 50%);
+    clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%);
+}
+
+main section div label{
+    width: 100%;
+}
+
+main div #option1_on:checked ~ .on,
+main div #option2_on:checked ~ .on,
+main div #option3_on:checked ~ .on,
+main div #option4_on:checked ~ .on{
+    display: none;
+}
+
+main div #option1_on:checked ~ .arrow,
+main div #option2_on:checked ~ .arrow,
+main div #option3_on:checked ~ .arrow,
+main div #option4_on:checked ~ .arrow{
+    z-index: 2;
+    display: block;
+}
+
+main div:has(#option1_on:checked),
+main div:has(#option2_on:checked),
+main div:has(#option3_on:checked){
+    background-color: rgb(204, 33, 33);
+}
+
+main div #option1_on:checked ~ .off,
+main div #option2_on:checked ~ .off,
+main div #option3_on:checked ~ .off,
+main div #option4_on:checked ~ .off{
+    display: block;
+}
+
+main section div:has(#option1_on:checked) ~ .items1,
+main section div:has(#option2_on:checked) ~ .items2,
+main section div:has(#option3_on:checked) ~ .items3{
+    z-index: 1;
+    max-height: 500px;
+}

@@ -1,0 +1,33 @@
+h2{
+    margin: 0;
+}
+
+#blue{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#blue #red{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#blue #red #yellow{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

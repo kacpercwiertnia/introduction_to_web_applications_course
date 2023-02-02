@@ -1,0 +1,24 @@
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    column-gap: 15px;
+    margin: 0;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+ul li{
+    transition: all 0.25s;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+
+ul li:hover{
+    color:red;
+}
+
+ul .active{
+    color:red;
+}

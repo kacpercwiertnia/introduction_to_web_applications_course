@@ -1,0 +1,27 @@
+<form [formGroup]="modelForm" (ngSubmit)="onSubmit()">
+    <label for="name">nazwa:</label><input name="name" id="name" type="text" formControlName="name">
+    <label for="destination">kraj:</label><input  name="destination" id ="destination" type="text" formControlName="destination">
+    <label for="start">data wyjazdu:</label><input name="start" id="start" type="date" formControlName="start">
+    <label for="end">data powrotu:</label><input name="end" type="date" formControlName="end">
+    <label for="price">cena:</label><input name="price" id="price" type="text" formControlName="price">
+    <p *ngIf="modelForm.get('price')?.errors">Proszę podać liczbę większą od 0</p>
+    <label for="quantity">ilość miejsc:</label><input name="quantity" id="quantity" type="text" formControlName="quantity">
+    <p *ngIf="modelForm.get('quantity')?.errors">Proszę podać liczbę większą od 0</p>
+    <label for="description">opis:</label><textarea name="description" type="text" formControlName="description"></textarea>
+    <label for="image">zdjęcie:</label>
+    <select name="image" formControlName="image"> 
+        <option value="" selected disabled>Wybierz zdjęcie</option>
+        <option *ngFor="let el of images"[value]="el">{{el.slice(89, 110)}}</option>
+    </select>
+    <label for="image2">zdjęcie:</label>
+    <select name="image2" formControlName="image2"> 
+        <option value="" selected disabled>Wybierz zdjęcie</option>
+        <option *ngFor="let el of images"[value]="el">{{el.slice(89, 110)}}</option>
+    </select>
+    <label for="image3">zdjęcie:</label>
+    <select name="image3" formControlName="image3"> 
+        <option value="" selected disabled>Wybierz zdjęcie</option>
+        <option *ngFor="let el of images"[value]="el">{{el.slice(89, 110)}}</option>
+    </select>
+    <button type="submit" [disabled]="!modelForm.valid">Zmień</button>
+</form>

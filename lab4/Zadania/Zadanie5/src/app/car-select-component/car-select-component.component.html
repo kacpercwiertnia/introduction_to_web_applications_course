@@ -1,0 +1,15 @@
+<select (input)="setSelectedBrand($event)">
+    <option disabled selected>Wybierz marke</option>
+    <option *ngFor="let el of allCars; index as i" [value]="i">{{el.brand}}</option>
+</select>
+<select (input)="setSelectedModel($event)" [ngStyle]="{'visibility': modelDisabled ? 'visible' : 'hidden'}">
+    <option disabled selected>Wybierz model</option>
+    <option *ngFor="let el of models; index as i" [value]="i">{{el.name}}</option>
+</select>
+<app-color-select-component (notifyDisabled)="onNotifyDisabled($event)" (notifyColor)="onNotifyColor($event)" [color]="color" [colorDisabled]="colorDisabled"></app-color-select-component>
+<section [ngStyle]="{'visibility': specDisabled ? 'visible' : 'hidden'}">
+<h2>{{allCars[selectedBrand].brand}}</h2>
+<h3>{{allCars[selectedBrand].models[selectedModel].name}}</h3>
+<h4>{{selectedColor}}</h4>
+<h4>{{description}}</h4>
+</section>

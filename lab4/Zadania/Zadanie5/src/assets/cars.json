@@ -1,0 +1,40 @@
+{
+    "cars":[
+            {
+                "brand" : "Audi",
+                "models" : [
+                    {"name": "Audi Q8", "color": ["silver", "black", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Audi A3", "color": ["blue", "silver", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Audi R8", "color": ["red", "black", "silver"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Audi S5", "color": ["blue", "silver", "red"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."}
+                ]
+            },
+            {
+                "brand" : "BMW",
+                "models" : [
+                    {"name": "BMW i4", "color": ["silver", "black", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "BMW X7", "color": ["blue", "silver", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "BMW M4", "color": ["red", "black", "silver"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "BMW Z4", "color": ["blue", "silver", "red"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."}
+                ]
+            },
+            {
+                "brand" : "Mercedes",
+                "models" : [
+                    {"name": "Mercedes GLE", "color": ["silver", "black", "orange"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Mercedes E-Class", "color": ["blue", "green", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Mercedes CLS", "color": ["red", "black", "yellow"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Mercedes C-Class", "color": ["white", "purple", "red"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."}
+                ]
+            },
+            {
+                "brand" : "Volkswagen",
+                "models" : [
+                    {"name": "Volkswagen Golf", "color": ["silver", "black", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Volkswagen ID.3", "color": ["blue", "silver", "white"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Volkswagen Passat", "color": ["red", "black", "silver"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."},
+                    {"name": "Volkswagen Tiguan", "color": ["blue", "silver", "red"], "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eleifend dui mi, vel placerat arcu lacinia a. Duis mauris sapien, congue in sollicitudin id, consequat et urna. Ut venenatis maximus elit quis placerat. Suspendisse potenti. Praesent ornare nisl at ante blandit, sed ultricies lorem viverra."}
+                ]
+            }
+    ]
+}

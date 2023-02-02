@@ -1,0 +1,143 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    height: 50px;
+    background-color: rgb(82,164,220);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vw;
+}
+
+.navbar .logo h1{
+    padding: 0; 
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.navbar .logo h1 span{
+    font-weight: 700;
+}
+
+.navbar .menu ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 10px;
+    padding: 0;
+}
+
+.navbar .menu ul li a{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu ul li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar .menu ul li:hover ul{
+    display: block;
+}
+
+.navbar .menu ul .dropdown{
+    position: relative;
+}
+
+.navbar .menu ul .dropdown ul{
+    display: none;
+}
+
+.navbar .menu ul li:hover .dropdown .hover_box{
+    position: absolute;
+    width: 150px;
+    left:-20px;
+    height: 20px;
+}
+
+.navbar .menu ul li:hover .dropdown .arrow{
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 20px;
+    top:8px;
+}
+
+.navbar .menu ul li:hover .dropdown ul{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 13px;
+    left: -18px;
+}
+
+.navbar .menu ul .dropdown ul li{
+    background-color: white;
+    padding: 15px 80px 15px 20px;
+}
+
+.navbar .menu ul .dropdown ul li span{
+    position: absolute;
+    color: rgb(82,164,220);
+    left: 110px;
+    bottom: 60px;
+}
+
+.navbar .menu ul .dropdown ul li:not(:nth-of-type(4)){
+    border-bottom: 1px solid rgb(82,164,220);
+}
+
+.navbar .menu ul .dropdown ul li a{
+    color: rgb(82,164,220);
+}
+
+.navbar .account a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 20vw;
+}
+
+.navbar .account a:nth-of-type(2){
+    background-color: white;
+    color:rgb(82,164,220);
+}
+
+main{
+    width: 100vw;
+    height: 95vh;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main div{
+    background-color: rgba(34, 141, 255, 0.283);
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:850px) {
+    .navbar{
+        padding: 0 1vw;
+    }
+
+    .navbar .account a{
+        
+        font-size: 15px;
+    }
+    
+}

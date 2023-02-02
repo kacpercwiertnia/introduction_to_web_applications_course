@@ -1,0 +1,100 @@
+#cart{
+    height: 100%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+#cart #close{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+#cart #close:hover{
+    color: red
+}
+
+#cart img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    border: 2px solid rgb(122, 122, 122);
+}
+
+#cart #content{
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#cart #content #upperSection #destAndQuant{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(162, 162, 162);
+}
+
+#cart #content #upperSection #destAndQuant h4{
+    font-size: 1.2em;
+    margin: 0;
+    user-select: none;
+}
+
+#cart #content #upperSection #destAndQuant h4 #lowAmount{
+    font-weight: 900;
+    color: red;
+    border: 2px solid red;
+    padding: 1px 10px;
+    border-radius: 50%;
+    cursor:auto;
+}
+
+#cart #content #upperSection #destAndQuant h4 span{
+    cursor: pointer;
+    color: grey;
+}
+
+#cart #content #upperSection #destAndQuant h4 span:nth-of-type(2){
+    margin-left: 10px;
+}
+
+#cart #content #upperSection #destAndQuant h4 span:nth-of-type(1){
+    margin-right: 10px;
+}
+
+
+#cart #content #lowerSection #date h4{
+    font-size: 1em;
+    margin: 0;
+}
+
+#cart #content #lowerSection #nameAndPrice{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(162, 162, 162);
+}
+
+#cart #content #lowerSection #nameAndPrice h2{
+    font-size: 1em;
+    margin: 0;
+}
+
+#cart #content #lowerSection #desc{
+    font-size: 1em;
+    margin: 0;
+    margin-bottom: 10px;
+
+}

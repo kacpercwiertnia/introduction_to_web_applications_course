@@ -1,0 +1,92 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(206, 238, 255);
+}
+
+main{
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+main header article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgb(169, 169, 169);
+}
+
+main header article section h5{
+    margin: 0;
+}
+
+main header article section .fullname{
+    margin-bottom: 5px;
+}
+
+main header article section .phone{
+    font-weight: 100;
+}
+
+main header article span{
+    color:white;
+    background-color: green;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main form{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 1%;
+    background-color: white;
+    box-shadow: 0px 0px 10px 1px rgb(169, 169, 169);
+    padding: 20px 0px;
+}
+
+main form section{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+main form section label{
+    text-transform: uppercase;
+    font-size: 12px;
+    color: grey;
+}
+
+main form section input{
+    border: 1px solid grey;
+    padding: 10px 5px;
+}
+
+main form #submit{
+    align-self: flex-end;
+    width: 28%;
+    padding: 11px;
+    border: 0;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+@media (max-width: 800px){
+    main{
+        width: 100%;
+    }
+}

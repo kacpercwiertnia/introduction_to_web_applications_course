@@ -1,0 +1,13 @@
+<div *ngIf="student" id="student">
+  <div>
+    <label>Imie: </label> {{student.name}}
+  </div>
+  <div>
+    <label>Wiek: </label> {{student.age}}
+  </div>
+  <div class = "button_container">
+    <span class="button is-small btn-danger" (click)='deleteStudent()'>Delete</span>
+    <span class="button is-small btn-info" [routerLink]="'/edit_student/'+student.key">Edytuj</span>
+  </div>
+  <hr />
+</div>
